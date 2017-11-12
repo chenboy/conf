@@ -1,6 +1,8 @@
-syntax enable
+syntax on
 set background=dark
+set encoding=utf-8
 colorscheme solarized
+set term=screen-256color
 
 "if has('mouse')
 "	set mouse=a
