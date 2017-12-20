@@ -14,7 +14,7 @@ set ts=2
 set shiftwidth=2
 set expandtab
 set cursorline
-set number
+set number relativenumber
 set smartindent
 
 set backspace=eol,start,indent
