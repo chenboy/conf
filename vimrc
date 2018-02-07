@@ -47,6 +47,7 @@ Plugin 'Valloric/YouCompleteMe'
 let g:ycm_auto_trigger = 1
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 "自动语法检测插件
 Plugin 'scrooloose/syntastic'
 "Recommended Setting
@@ -60,6 +61,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 "let g:syntastic_haskell_checkers = []
+let g:syntastic_go_checkers = ['go', 'gofmt', 'govet']
 
 Plugin 'rdnetto/YCM-Generator'
 
@@ -173,6 +175,12 @@ Plugin 'google/vim-codefmt'
 " Also add Glaive, which is used to configure codefmt's maktaba flags. See
 " `:help :Glaive` for usage.
 Plugin 'google/vim-glaive'
+
+Plugin 'Superbil/llvm.vim'
+augroup filetype
+  au! BufRead,BufNewFile *.ll     set filetype=llvm
+augroup END
+
 call vundle#end()
 " the glaive#Install() should go after the "call vundle#end()"
 call glaive#Install()
